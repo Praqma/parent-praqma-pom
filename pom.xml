@@ -124,9 +124,6 @@
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
-            <properties>
-                <maven.test.skip>true</maven.test.skip>
-            </properties>
             <build>
                 <plugins>
                     <plugin>
@@ -146,7 +143,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-checkstyle-plugin</artifactId>
-                        <version>2.10</version>
+                        <version>2.11</version>
                         <configuration>
                           <enableRulesSummary>false</enableRulesSummary>
                         </configuration>
