@@ -1,45 +1,45 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.praqma</groupId>
-	<artifactId>praqma-parent</artifactId>
-	<version>0.1.5-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>net.praqma</groupId>
+    <artifactId>praqma-parent</artifactId>
+    <version>0.1.6-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<name>Praqma Parent</name>
-	<url>http://www.praqma.net/</url>
+    <name>Praqma Parent</name>
+    <url>http://www.praqma.net/</url>
 	
-	<scm>
-		<connection>scm:git:http://github.com/Praqma/parent-praqma-pom.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/Praqma/parent-praqma-pom.git</developerConnection>
-		<url>https://github.com/Praqma/parent-praqma-pom.git</url>
-	</scm>	
+    <scm>
+        <connection>scm:git:http://github.com/Praqma/parent-praqma-pom.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/Praqma/parent-praqma-pom.git</developerConnection>
+        <url>https://github.com/Praqma/parent-praqma-pom.git</url>
+    </scm>	
 
-	<distributionManagement>
-	  <repository>
-	    <id>praqma</id>
-	    <name>praqma</name>
-	    <url>scpexe://10.10.1.25:/var/www/repo/maven</url>
-	  </repository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>praqma</id>
+            <name>praqma</name>
+            <url>scpexe://10.10.1.25:/var/www/repo/maven</url>
+        </repository>
+    </distributionManagement>
 	
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>2.5.2</version>
-			</plugin>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
                         
-                        <plugin>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>cobertura-maven-plugin</artifactId>
-                        <version>2.6</version>
-                        </plugin>
-		</plugins>
-	</reporting>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+        </plugins>
+    </reporting>
 	
-	<profiles>
+    <profiles>
 
         <profile>
             <id>coverage</id>
@@ -109,14 +109,14 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <reporting>
-            <plugins>
-              <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>javancss-maven-plugin</artifactId>
-                <version>2.0</version>              
-              </plugin>
-            </plugins>
-          </reporting>            
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>javancss-maven-plugin</artifactId>
+                        <version>2.0</version>              
+                    </plugin>
+                </plugins>
+            </reporting>            
         </profile>
         
         <profile>
@@ -145,7 +145,7 @@
                         <artifactId>maven-checkstyle-plugin</artifactId>
                         <version>2.11</version>
                         <configuration>
-                          <enableRulesSummary>false</enableRulesSummary>
+                            <enableRulesSummary>false</enableRulesSummary>
                         </configuration>
                         <executions>
                             <execution>
@@ -184,19 +184,16 @@
 
                 </plugins>
             </build>
-        </profile>
-		
-	</profiles>
-	
-	
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-			</plugin>
+        </profile>	
+    </profiles>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -211,10 +208,11 @@
                 </executions>
             </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -231,16 +229,16 @@
                 </executions>
             </plugin>
 
-		</plugins>
+        </plugins>
 
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh-external</artifactId>
-				<version>1.0</version>
-			</extension>
-		</extensions>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh-external</artifactId>
+                <version>1.0</version>
+            </extension>
+        </extensions>
 
-	</build>
+    </build>
 	
 </project>
