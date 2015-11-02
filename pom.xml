@@ -3,7 +3,7 @@
 
     <groupId>net.praqma</groupId>
     <artifactId>praqma-parent</artifactId>
-    <version>0.1.6-SNAPSHOT</version>
+    <version>0.1.7-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Praqma Parent</name>
@@ -13,7 +13,8 @@
         <connection>scm:git:http://github.com/Praqma/parent-praqma-pom.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/Praqma/parent-praqma-pom.git</developerConnection>
         <url>https://github.com/Praqma/parent-praqma-pom.git</url>
-    </scm>	
+      <tag>HEAD</tag>
+  </scm>	
 
     <distributionManagement>
         <repository>
